@@ -1,0 +1,27 @@
+newmtl rbot051
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd rbot051.png
+newmtl eye02
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd eye02.png
+newmtl missile
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd missile.png
+newmtl flat5
+illum 2
+Kd 0.125490196078431 0.125490196078431 0.125490196078431
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00

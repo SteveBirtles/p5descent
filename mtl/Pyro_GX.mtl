@@ -1,0 +1,48 @@
+newmtl glow04
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd glow04.png
+newmtl ship1-1
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd ship1-1.png
+newmtl ship1-2
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd ship1-2.png
+newmtl ship1-3
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd ship1-3.png
+newmtl ship1-4
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd ship1-4.png
+newmtl ship1-5
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd ship1-5.png
+newmtl flat0
+illum 2
+Kd 0 0 0
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00

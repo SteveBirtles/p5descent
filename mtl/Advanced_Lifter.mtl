@@ -1,0 +1,28 @@
+newmtl metl009
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd metl009.png
+newmtl eye01
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd eye01.png
+newmtl rbot018
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd rbot018.png
+newmtl rbot020
+illum 2
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Ks 0.00 0.00 0.00
+d 1.0
+map_Kd rbot020.png
