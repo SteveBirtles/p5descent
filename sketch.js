@@ -1,7 +1,24 @@
+"use strict";
+
+p5.disableFriendlyErrors = true;
+
+const objectFiles = [
+    "Pyro_GX", "Class_1_Drone", "Class_2_Drone", "Light_Hulk", "Medium_Hulk",
+    "Medium_Lifter", "Heavy_Hulk", "Vulcan_Driller", "Spider_Processing_Robot", "Advanced_Lifter",
+    "Heavy_Driller", "Defense_Prototype", "Fusion_Hulk", "Level_7_Boss", "Level_27_Boss",
+];
+
+const textureFiles = [
+    "boss02", "eye01", "eye02", "eye03", "glow02", "glow04", "metl009", "missile", "rbot006",
+    "rbot008", "rbot009", "rbot010", "rbot011", "rbot012", "rbot018", "rbot019", "rbot020",
+    "rbot021", "rbot031", "rbot032", "rbot035", "rbot036", "rbot037", "rbot048", "rbot049",
+    "rbot051", "rbot052", "rbot053", "rbot055", "rbot058", "rbot059", "rbot060", "rbot064",
+    "ship1-1", "ship1-2", "ship1-3", "ship1-4", "ship1-5"
+];
+
 let textures = {};
 
 let inconsolata;
-
 
 function preload() {
 
@@ -125,10 +142,7 @@ function setup() {
                 });
 
             });
-
-
-
-
+            
     }
 }
 
@@ -146,13 +160,13 @@ function draw() {
 
     background(0, 0, 0);
 
-    stroke(255, 255, 255);
-
     if (robots.length !== objectFiles.length - skipped) return;
 
     push();
 
     noStroke();
+    textureMode(NORMAL);
+    textureWrap(REPEAT);
 
     translate(0, 0, -300);
 
@@ -187,13 +201,10 @@ function draw() {
         let cosformula = (aSquared + bSquared - cSquared) / (2 * sqrt(aSquared) * sqrt(bSquared));
         let illumination = min(255, max(64, 192 * cosformula));
 
-
         if (face[0].texture !== null) {
             if (textures.hasOwnProperty(face[0].texture)) {
                 textures[face[0].texture].used = true;
                 texture(textures[face[0].texture]);
-                textureMode(NORMAL);
-                textureWrap(REPEAT);
                 tint(illumination, illumination, illumination);
             } else if (materials.hasOwnProperty(face[0].texture)) {
                 fill(illumination * materials[face[0].texture].r,
