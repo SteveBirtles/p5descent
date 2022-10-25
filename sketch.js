@@ -156,6 +156,16 @@ let myX = 0, myY = 0, myZ = 300;
 
 function draw() {
 
+    if (touches.length > 0) {
+        if (touches[0].x < windowWidth / 2) {
+            r--;
+            if (r < 0) r = robots.length - 1;
+        } else {
+            r++;
+            if (r > robots.length - 1) r = 0;
+        }
+    }
+
     angle += deltaTime / 1000;
 
     background(0, 0, 0);
