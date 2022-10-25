@@ -17,6 +17,7 @@ const textureFiles = [
 ];
 
 let textures = {};
+let lastTouchCount = 0;
 
 let inconsolata;
 
@@ -157,14 +158,24 @@ let myX = 0, myY = 0, myZ = 300;
 function draw() {
 
     if (touches.length > 0) {
-        if (touches[0].x < windowWidth / 2) {
-            r--;
-            if (r < 0) r = robots.length - 1;
-        } else {
-            r++;
-            if (r > robots.length - 1) r = 0;
+        if (lastTouchCount == 0 && 
+            touches[0].y > windowHeight / 2) {
+            if (touches[0].x < windowWidth / 2) {
+                r--;
+                if (r < 0) r = robots.length - 1;
+            } else {
+                r++;
+                if (r > robots.length - 1) r = 0;
+            }
+        } else if (touches[0].y < windowHeight / 2) {
+            if (touches[0].x < windowWidth / 2) {
+                size *= 1.01;
+            } else {
+                size /= 1.01;
+            }
         }
     }
+    lastTouchCount = touches.length;
 
     angle += deltaTime / 1000;
 
